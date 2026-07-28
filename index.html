@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent A Car</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/availablecar.css">
+    <link rel="stylesheet" href="css/media.css">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+    <!-- Navbar Section -->
+    <div class="navbar"></div>
+
+    <!-- Hero Section -->
+    <section>
+            <div class="hero-container">
+                <div class="content">
+                    <div class="title">
+                        <span class="rent-dreamcar">Rent your Dream Car</span>
+                        <h1>Drive Your Way,</h1>
+                        <p>Anytime, Anywhere</p>
+                        <p class="page-content">ARC make car rental simple, fast and affordable.</p>
+                        <p class="page-content">Choose from a wide range of vehicle to suit your journey.</p>
+
+                        <div class="btn-container">
+                            <a href="carlist.html">
+                                <button class="bookbtn">Book Your Car</button>
+                            </a>
+                            <a href="#contact">
+                                <button class="carlistbtn">Inquire Now!</button>
+                            </a>
+                        </div>
+
+                        <div class="cars-availability-container">
+                            <div class="cars">
+                                <span class="cars-number" data-target="400">0</span>+<br>
+                                <span>Cars Available</span>
+                            </div>
+                            <div class="cars">
+                                <span class="cars-number" data-target="50">0</span>+<br>
+                                <span>Location</span>
+                            </div>
+                            <div class="cars">
+                                <span class="cars-number" data-target="98">0</span>%<br>
+                                <span>Satisfied Customers</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <img src="image/hero-background.png" alt="" class="hero-image">
+                    
+                </div>
+                
+            </div>
+    </section>
+
+<!-- Rent Information Details  -->
+    <section>
+        <div class="clientrent-details">
+            
+                <div class="rent-content">
+                
+                        <div class="rent-info">
+                            <p class="rent-title">Car Type</p>
+                            <span>Select Car</span><br>
+                            <select name="" id="select" class="select">
+                                <option value="">Select a Car</option>
+                                <option value="Luxury">Luxury Cars</option>
+                                <option value="SUV">SUVs</option>
+                                <option value="Economy">Economy Cars</option>
+                                <option value="Electric">Electric Cars</option>
+                                <option value="Van">Vans & MPVs</option>
+                            </select>
+                        </div>
+
+                        <div class="rent-info">
+                            <P class="rent-title">Pick Up</P>
+                            <label>Pick-up Date</label><br>
+                            <input type="date" name="pickup-date">
+                        </div>
+
+                        <div class="rent-info">
+                            <p class="rent-title">Return</p>
+                            <label>Return Date</label><br>
+                            <input type="date" name="return-date">
+                        </div>
+
+
+                        <div class="popup-message-container">
+                            <p class="popup-headtitle"></p>
+
+                            <div>
+                                <div class="popup-message">
+                                    <!-- Load Image Here -->
+                                </div>
+                                <i class="fa-solid fa-circle-xmark xmark-icon"></i>
+                            </div>
+                            
+                        </div>
+
+                            
+                        
+                        <div class="askBtn">
+                            <button class="btn availabilityBtn">Ask Availability</button>
+                        </div>
+                </div>
+            
+        </div>
+
+    </section>
+
+    <!-- Car Categories Section -->
+    <section id="car">
+        <div class="cartegory-container">
+            <div class="category-title">
+                <h2>Our Vehicles</h2>
+                <p class="right-car">Choose from our perfectly maintained vehicles.  </p>
+                <p>Find the ideal ride for business trips, family vacations, or weekend getaways.</p>
+            </div>
+
+            <div class="car-category">
+                    <!-- Load Image Here  -->
+            </div>
+        </div>
+    </section>
+
+<!-- About Section -->
+    <section id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <video class="about-video" autoplay muted loop playsinline>
+                    <source src="image/car/car.mp4" type="video/mp4" class="video-play">
+                </video>
+
+                <div class="aboutarc-container">
+                    <h2 class="aboutarc">About Us</h2>
+                    <p>
+                        At ARC, we combine a modern<br> 
+                        fleet with customer-first service to<br>
+                        redefine car rental.
+                    </p>
+                    <button class="aboutBtn" onclick="aboutUs()">More About Us
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="profile-container">
+
+                        <div class="profile-grid">
+                            <div class="profile-content">
+                                <div class="profile-img">
+                                    <div class="flex-image">
+                                        <img src="image/profile1.jpg" alt="" class="profile">
+                                        <img src="image/profile2.jpg" alt="" class="profile">
+                                        <img src="image/profile3.jpg" alt="" class="profile">
+                                        <img src="image/profile4.jpg" alt="" class="profile">
+                                    </div>
+                                    
+                                    <p>
+                                        <span class="rated">10,000 +</span><br>
+                                            Customer's Satified
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <div class="hline"></div>
+                                    <span>
+                                        Delivering reliable rentals trusted by<br>
+                                        travelers worldwide.
+                                    </span>
+                                </div>
+                            </div>
+                                
+                            
+                            <div class="drive-img">
+                                <img src="image/car/luxurycar.png" alt="">
+                                <p>
+                                    Drive in comfort,<br>
+                                    Arrive in Style
+                                </p>
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h3>Rent your Dream Car</h3>
+            <p>Contact Us</p>
+        </div>
+
+        <!-- Grid portion -->
+        <div class="contact-content">
+                <div class="contact-title">
+                    <p>
+                        <span>Drive Your Dream,</span><br>
+                        We'll Handle the<br>
+                        Details
+                    </p>
+
+                    <div class="contact-text">
+                        Have question or need a custom plan? Our team is here to guide you<br>
+                        through every step whether it's a quick get away, a luxury event, or<br> 
+                        long-term elite arrangement.
+                    </div>
+
+                    <div class="sub-text">
+                        <i class="fa-solid fa-square-phone icon"></i>
+
+                        <div class="text-content">
+                            <span class="emergency">Emergency Support Line</span>
+                            <p>+63 998-0101-0775</p>
+                        </div>
+                    </div>
+
+                    <div class="sub-text">
+                        <i class="fa-solid fa-envelope-circle-check icon"></i>
+
+                        <div class="text-content">
+                            <span class="emergency">General Inquiries</span>
+                            <p>arclink.services2@gmail.com.</p>
+                        </div>
+                    </div>
+
+                        <p class="chat-support">Chat with our support team in real-time,<br> Monday to Saturday 8:00Am to 6:00Pm</p>
+                    
+                </div>
+
+             <!-- Form Input Section -->
+                <div class="form-container">                
+                        <form action="">
+                            <div class="field-input">
+                                <label for="">Full Name</label><br>
+                                <input type="text" name="name" class="name" placeholder="Enter your Full Name">
+                            </div>
+
+                            <div class="field-cont">
+                                <div class="field-input">
+                                    <label for="">Email</label><br>
+                                    <input type="text" name="email" class="email" placeholder="Enter your email">
+                                </div>
+
+                                <div class="field-input">
+                                    <label for="">Phone</label><br>
+                                    <input type="text" name="phone" placeholder="Enter your phone number">
+                                </div>
+                            </div>
+
+                            <div class="field-input">
+                                <label for="">Location</label><br>
+                                <input type="text" name="location" placeholder="Enter your location">
+                            </div>
+
+                            <div class="field-input">
+                                <label for="">Message</label><br>
+                                <textarea type="text" name="message" rows="5" cols="10" placeholder="Enter your message..."></textarea>
+                            </div>
+
+                            <button type="submit" class="formBtn">
+                                Sumbit <i class="fa-solid fa-paper-plane paper-plane"></i>
+                            </button>
+                        </form>
+                </div>
+
+            
+        </div>
+
+    </section>
+
+<!-- Footer Section -->
+    <div class="footer"></div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/like.js"></script>
+    
+    
+
+    
+</body>
+</html>

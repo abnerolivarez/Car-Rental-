@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Catalog</title>
+   
+    <link rel="stylesheet" href="css/carlist.css">
+</head>
+<body>
+
+<!-- Navbar Section -->
+    <div class="navbar"></div>
+
+
+    <div class="container">
+        
+        <!-- Filter Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Filters</h2>
+                <span class="reset-btn">Reset All</span>
+            </div>
+            
+            <!-- Vehicle Type -->
+            <div class="filter-group">
+                <h3>Vehicle Type</h3>
+                <div class="checkbox-list">
+                    <label class="checkbox-item">
+                        <input type="checkbox" checked class="check-item" value="all"> All
+                    </label>
+                    
+                    <label class="checkbox-item">
+                        <input type="checkbox" class="check-item" value="SUV"> SUV
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" class="check-item" value="Economy"> Economy
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" class="check-item" value="Electric"> Electric
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" class="check-item" value="Luxury"> Luxury
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" class="check-item" value="Van"> Vans & MPVs
+                    </label>
+                </div>
+            </div>
+
+            <!-- Price Range -->
+            <div class="filter-group">
+                <h3>Max Price / Day</h3>
+                <div class="slider-labels">
+                    <span class="minus">Down</span>
+                    <span class="plus">Up</span>
+                </div>
+                <input type="range" min="700" max="3000" value="3000" class="price-slider">
+                <div class="slider-labels">
+                    <span>₱700</span>
+                    <span>₱1500</span>
+                    <span class="current-price">₱3000</span>
+                    
+                </div>
+            </div>
+
+            <!-- Transmission -->
+            <div class="filter-group">
+                <h3>Transmission</h3>
+                <div class="toggle-buttons">
+                    <button class="toggle-btn active" data-transmissiontype="Auto">Automatic</button>
+                    <button class="toggle-btn" data-transmissiontype="Manual">Manual</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="top-bar-title">
+                    <h1>Available Cars</h1>
+                    <p>Showing cars ready to book</p>
+                </div>
+                <div class="sort-container">
+                    <span class="sort-label">Sort by:</span>
+                    <select class="sort-select">
+                        <option value="recommended">Recommended</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                        <option vlaue="top-rated">Top Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Loading Animation -->
+            <div class="loading" style="display:none;">
+                <div class="spinner"></div>
+            </div>
+
+            <!-- Car Grid -->
+            <div class="car-grid">
+                <!--Image Load Here  -->
+            </div>
+
+        </main>
+    </div>
+
+<!-- Fill Up Form for Rental -->
+<div class="rental-modal">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h2>Please Fill Up Car Rental Form</h2>
+            <button class="close-modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+            <form action="">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" class="name" name="name" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="phone-email-container">
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" class="email" name="email" placeholder="Enter your email">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Phone Number</label>
+                            <input type="tel" class="phone" name="phone" placeholder="09XXXXXXXXX">
+                        </div>
+                    </div>
+
+                    <div class="date-grid">
+
+                        <div class="input-group">
+                            <label>Pickup Date</label>
+                            <input type="date" name="pickupdate" class="pickup-date">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Return Date</label>
+                            <input type="date" name="returndate" class="return-date">
+                        </div>
+
+                    </div>
+
+                    <div class="input-group">
+                        <label>Additional Notes</label>
+                        <textarea name="message" rows="4" placeholder="Special requests..."></textarea>
+                    </div>
+
+                    
+                    <div class="mode-container">
+                        <h5>Mode Of Payment</h5>
+                        <div class="mode-grid">
+                            <div class="payment-option">
+                                    <input type="radio" id="maya" name="payment" hidden>
+                                    <label for="maya" class="payment-card">
+                                        <img src="image/mayalogo.png" alt="Maya">
+                                        <i class="fa-solid fa-circle-check check-icon"></i>
+                                    </label>
+                                </div>
+
+                                <div class="payment-option">
+                                    <input type="radio" id="gcash" name="payment" hidden>
+                                    <label for="gcash" class="payment-card">
+                                        <img src="image/gcashlogo.png" alt="GCash">
+                                        <i class="fa-solid fa-circle-check check-icon"></i>
+                                    </label>
+                                </div>
+
+                                <div class="payment-option">
+                                    <input type="radio" id="visa" name="payment" hidden>
+                                    <label for="visa" class="payment-card">
+                                        <img src="image/visacard.png" alt="Visa">
+                                        <i class="fa-solid fa-circle-check check-icon"></i>
+                                    </label>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="cancel-btn">Cancel</button>
+                    <button type="submit" class="confirm-btn">Confirm Rental</button>
+                </div>
+        </form>
+    </div>
+</div>
+
+
+    <!-- Footer Section -->
+    <div class="footer"></div>
+
+
+    <script src="js/navbar.js"></script>
+    <script src="js/carlist.js"></script>
+    <script src="js/like.js"></script>
+
+
+
+</body>
+</html>
