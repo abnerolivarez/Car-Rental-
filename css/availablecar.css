@@ -1,0 +1,327 @@
+/* Container for available cars */
+
+.popup-message-container{
+        display: none;
+        width: 100%;
+        max-width: 700px;
+        min-height: 400px;
+        
+        background-color: #cecece;
+        overflow-y: scroll;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        border-radius: 15px;
+
+        text-align: center;
+        
+    }
+
+    .popup-message-container.show{
+        display: block;
+    }
+    
+    .popup-headtitle{
+        display: flex;
+        justify-content: center;
+       
+        position: absolute;
+        top: 50%;
+        left: 38%;
+    }
+    .popup-headtitle.show{
+        display: none;
+    }
+
+    .popup-message{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        
+        padding: 20px;
+        height:60vh;
+        font-size: 20px;
+        gap:15px;
+    }
+    
+    
+
+    .xmark-icon{
+        position: absolute;
+        top: 2%;
+        right: 0;
+        transform: translate(-50%);
+
+        font-size: 20px;
+        color: #000000;
+        cursor: pointer;
+        transition: all .3s ease-in;
+        &:hover{color: #b71500;}
+    }
+
+
+
+/* Car Card */
+.car-card {
+    
+    background: #fff;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    transition: .3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Card body */
+.card-body {
+    padding: 15px;
+   
+}
+
+
+/* Header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.car-title {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.text-muted{color: #999;}
+
+
+
+
+
+.car-category {
+    margin: 5px 0;
+    color: #ff0000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* Heart button */
+.heart-btn{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.heart-btn i{
+    transition: .3s;
+}
+
+.heart-btn i.fa-solid{
+    color: red;
+}
+
+.favorite-container{
+    position: relative;
+    display: inline-block;
+
+}
+
+/* Pop animation */
+.floating-heart{
+    position: absolute;
+    left: 50%;
+    top: 10px;
+
+    color: #ff3b5c;
+    font-size: 20px;
+
+    pointer-events: none;
+    opacity: 0;
+
+    transform: translateX(-50%) scale(.2);
+}
+
+.floating-heart.animate{
+    animation: floatHeart .9s ease-out forwards;
+}
+
+@keyframes floatHeart{
+
+    0%{
+        opacity: 0;
+        transform: translateX(-50%) translateY(0) scale(.2);
+    }
+
+    20%{
+        opacity: 1;
+        transform: translateX(-50%) translateY(-10px) scale(1.5);
+    }
+
+    50%{
+        transform: translateX(-50%) translateY(-35px) scale(1);
+    }
+
+    100%{
+        opacity: 0;
+        transform: translateX(-50%) translateY(-70px) scale(.5);
+    }
+}
+
+.favorite-badge{
+    position: absolute;
+    top: -8px;
+    left: 25px;
+
+     width: 20px;
+    height: 20px;
+
+    background: rgb(0, 106, 255);
+    color: #fff;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    display: none; /* Hide when count is 0 */
+}
+
+.favorite-badge.show{
+    display: flex;
+}
+
+
+
+/* Image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin: 10px 0;
+}
+
+
+.image-container img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+
+/* Specs */
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+
+.spec-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #555;
+}
+
+
+.spec-item i {
+    width: 18px;
+}
+
+
+/* Card Footer */
+.card-footer {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price-container .currency{
+    color: #ff0000;
+    font-weight: 400;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.price-unit {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* Rent button */
+.cta-btn {
+    border: none;
+    background: #fc8032;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+
+.cta-btn:hover {
+    box-shadow: 0 5px 15px #fc7f32;
+}
+
+
+.rented-btn {
+    background: #999;
+    cursor: not-allowed;
+}
+
+
+
+
+
+@media(max-width: 768px){
+    .popup-message-container{
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%);
+      justify-content: center;
+      margin-top: 2rem;
+      z-index: 999;
+      
+    }
+
+    .popup-message {
+        grid-template-columns: 1fr;
+        z-index: 10;
+    }
+
+    .car-card{
+       
+        width: 100%;
+        margin: auto;
+        margin-top: -3rem;
+        margin-bottom:  3rem;
+    }
+
+}
+
+
+

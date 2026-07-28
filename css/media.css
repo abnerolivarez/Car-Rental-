@@ -1,0 +1,226 @@
+@media(max-width:768px){
+
+    /* Burger Menu Section */
+    .burgerBtn-container{
+        display: block;
+    }
+
+     .burgerBtn-container.active .burger-Menubtn:nth-child(1){
+        transform: translateY(9px) rotate(45deg);
+        background-color: #a80000e8;
+    }
+    .burgerBtn-container.active .burger-Menubtn:nth-child(2){
+        opacity: 0;
+    }
+    .burgerBtn-container.active .burger-Menubtn:nth-child(3){
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: #a80000e8;
+    }
+
+    /* For Dark Mode Setting */
+    body.light-mode{
+        .navbar-links{
+            background-color: #fff;
+        }
+    }
+
+/* Navbar Section */
+    .navbar-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 3.4rem;
+        width: 150px;
+        right: 0;
+        background-color: #181818;
+        gap: 15px;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .navbar-links.show{
+        display: flex;
+    }
+
+    .navbar-links li a{
+        display: flex;
+    }
+
+
+    /* Hero Section */
+    .hero-container{
+    .content{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    h1{
+        font-size: clamp(25px, 8vw, 50px);
+        margin-bottom: -1.7rem;
+    }
+
+    p{
+        font-size: clamp(5px, 8vw, 20px);
+    }
+    .btn-container{
+        margin-bottom: 1.5;
+        text-align: center;
+    }
+
+    .bookbtn{
+        margin-bottom: 1rem;
+    }
+
+    .page-content{
+        font-size: .8rem;
+        line-height: 1rem;
+    }
+
+    .hero-image{
+        max-width: 60%;
+    }
+
+      .cars{
+            font-size: .5rem
+           
+        }
+
+        .cars .cars-number{
+            font-size: 1.5rem;
+        }
+    }
+
+
+    /* Client Rent Details Section */
+.clientrent-details{
+
+        .rent-content{
+                flex-direction: column;
+                
+            }
+
+            .rent-info input, .select, .btn{
+                width: min(1000px, 100%);
+            } 
+
+            .rent-info span, .rent-info label .rent-title{
+                align-items: center;
+        }
+        
+    }
+
+/* About Section */
+    .about-container{
+        .about-content{
+            flex-direction: column;
+            align-items: center;
+    }
+
+    .about-content{
+         p{
+            font-size: 1.2rem;
+        }
+
+        .aboutarc-container{
+
+            .aboutarc{
+                text-align: center;
+            }
+
+            p{
+               text-align: center;
+               font-size: clamp(5px, 8vw, 20px);
+            }
+            .aboutBtn{
+                align-items: center;
+                width: 100%;
+            }
+            
+        }
+    }
+    
+    .profile-container{
+
+        .profile-content{
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            
+        }
+
+        .profile-grid{
+            flex-direction: column;
+
+             .profile-img{
+                flex-direction: column;
+                width: 100%;
+               
+                .rated{
+                    font-size: clamp(5px ,8vw, 10px);
+                }
+            }
+            
+            .driveimg{
+                margin-top: .5rem;
+            }
+        }
+
+        
+    }
+
+
+
+
+}
+
+ /*Contact section  */
+ .contact-container{
+    p{
+        font-size: clamp(32px, 8vw, 80px);
+    }
+ }
+
+ .contact-content{
+    flex-direction: column;
+    align-items: center;
+        
+        .contact-title{
+            margin-bottom: 1rem;
+        }
+
+        p{
+            font-size: clamp(32px, 8vw, 80px);
+        }
+
+        .contact-text{
+            font-size: clamp(5px, 8vw, 15px);
+        }
+ }
+
+    .form-container{
+         .field-cont{
+            flex-direction: column;
+        }
+
+ }
+
+
+
+ 
+
+
+
+
+.footer-container .footer-content{
+        flex-direction: column;
+        gap: 1.2rem;
+        
+        
+    }
+
+    
+
+    
+}
+

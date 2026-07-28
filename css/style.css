@@ -1,0 +1,830 @@
+*{
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* =======Dark Mode Default Setting====== */
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background-color: #000000df;
+  font-optical-sizing: auto;
+}
+
+
+/* ====Light Mode Section==== */
+body.light-mode{
+    background: #fff;
+    color: #222;
+
+    .car-card{
+        background: #fff;
+        color: #222;
+    }
+
+    .navbar-container{
+        background: #e7e7e7;
+
+        .navbar-links li a{
+            color: #000;
+        }
+        .company-name{
+            color: #000;
+        }
+    }
+
+    .dark-mode{
+        color: #000;
+    }
+
+    .footer_copy{
+        background-color: #e7e7e7;
+        color: #000;
+    }
+    .burger-Menubtn{
+        background-color: #000;
+    }
+
+    .clientrent-details{
+        background-color: #e7e7e7;
+    }
+    .rent-info{color:#000000;}
+
+    .carImage-container{
+        background-color: #e2e2e2;
+
+        h1,p{color:#000}
+    }
+
+    /* have an issue in this part can't change the background in light mode  */
+    .profile-grid{
+        .profile-content, .drive-img{
+            background-color: #e2e2e2;
+            
+        }
+    }
+
+    .form-container{
+        background-color: #cccccc;
+        label{
+            color: #000;
+        }
+        
+    }
+    
+    
+
+}
+/* ============================================== */
+
+
+/* =======Navbar Section========= */
+.navbar-container{
+    width: min(1200px, 100%);
+    height: 70px;
+    margin: 0 auto;
+    background-color: #121212;
+
+    position: fixed;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 100;
+}
+
+.navcarlogo-container{
+    display: flex;
+    align-items: center;
+    color: #cecece;
+    gap: 10px;
+
+    .company-name{
+        font-weight: 500;  
+    }
+
+    .arc{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #ededed;
+        gap: .5rem;
+    }
+}
+.navbar-logo{
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Burger Menu Button for Small Device */
+.burgerBtn-container{
+    display: none;
+}
+
+.burger-Menubtn{
+    background-color: #e0e0e0;
+    width: 25px;
+    height: 4px;
+
+    border-radius: 5px;
+    margin-bottom: 5px;
+    z-index: 2;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.darkmode-container{
+    display: flex;
+    justify-content: flex-end;
+    
+    .dark-mode{
+        color: #e5e5e5;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+.navbar-links{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+
+    .theme-btn{
+        background-color: transparent;
+        border: none;
+    }
+}
+
+
+.navbar-links li a{
+    text-decoration: none;
+    color: #ececec;
+    font-size: .9rem;
+    align-items: center;
+    transition: all .3s ease-in-out;
+    &:hover{
+        color: #e1e0e0;
+    }
+}
+
+.nav-menu.active{
+    background-color: #b30000;
+    padding: 5px 10px;
+    border-radius: 10px;
+    
+    &:hover{
+        background-color: #cb0000;
+        /* box-shadow: 0 4px 12px rgba(252, 128, 50, 0.5);
+        transform: translateY(-2px); */
+    }
+}
+/* ================================================================ */
+
+/* Hero Section */
+.hero-container{
+    width: min(1200px, 100%);
+    margin: 30px auto;
+
+    height: 500px;
+    /* background: linear-gradient(
+        90deg,
+        #040404 0%,
+        #750000 50%,
+        #141414 100%
+        ); */
+
+        background: radial-gradient(circle,#930000, #000000db);
+
+    display: flex;
+    align-items: center;
+    padding: 40px;
+   
+
+    .content{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        color: #ededed;
+        align-items: center;
+    }
+
+    .title{
+        padding: 10px 15px;
+    }
+
+    h1{
+        color: #ffb903;
+        font-size: 3.2rem;
+        margin-top: .8rem;
+        margin-bottom: -2rem;
+    }
+
+    p{
+        font-size: 1.5rem;
+    }
+
+    .page-content{
+        font-size: 1rem;
+        margin-bottom: -1rem;
+        
+    }
+    .btn-container{
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+       
+    }
+
+    .btn-container a{
+         text-decoration: none;
+    }
+
+    .bookbtn{
+        padding:.7rem 1rem;
+        border-radius: 1.5rem;
+        
+        background-color:#ffb903;
+        border: none;
+        cursor: pointer;
+        &:hover{
+            background-color:#ffc942;
+        }
+    }
+    .carlistbtn{
+        padding:.7rem 1rem;
+        border-radius: 1.5rem;
+         color: #fff;
+        background-color:#aaaaa9;
+        margin: 0 1rem;
+        border: none;
+        cursor: pointer;
+        &:hover{
+            background-color:#dbdbdb;
+            color: #121212;
+        }
+    }
+
+    .hero-image{
+        width:100%;
+        max-width: 500px;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+
+    .cars-availability-container{
+        display: flex;
+        gap: 2rem;
+
+       
+        .cars-number{
+            font-size: 2rem;
+            
+        }
+    }
+    
+
+}
+/* =========================================================== */
+
+/* Client Rent Details Section */
+.clientrent-details{
+    width: min(1200px, 100%);
+    margin: 0 auto;
+
+    background-color: #0f0f0f;
+    padding: 50px;
+    margin-bottom: 2rem;
+    padding: 0 40px;
+    
+
+    .rent-content{
+        display: flex;
+        justify-content: space-around;
+        padding: 25px;
+        margin-top: -2rem;
+    }
+    .rent-info{
+        color: #ececec;
+        margin-top: -1.4rem;
+        
+    }
+    .rent-info input, .select{
+        padding: .8rem 1rem;
+        border-radius: .4rem;
+        margin-bottom: .7rem;
+        border: none;
+        
+    }
+    
+    .rent-info span, .rent-info label{
+        font-size: .8rem;
+        padding: .5rem 0;
+    }
+    .rent-title{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    
+    .askBtn{
+        padding: 1.8rem  .5rem;
+    }
+
+    
+
+    .askBtn button{
+        padding:.7rem 1rem;
+        border-radius: 1.5rem;
+        background-color:#ffb903;
+        border: none;
+        cursor: pointer;
+        &:hover{
+            background-color:#ffc942;
+        }
+    }
+
+  
+}
+
+/* Car Category Section */
+
+.cartegory-container{
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    
+    background:linear-gradient(
+        90deg,
+        #990000 0%,
+        #d89700 100%,
+        #940000 100%
+     );
+
+    text-align: center;
+    padding: 40px;
+    margin-bottom: 2rem;
+
+     
+
+     .category-title{
+        color: #ececec;
+        align-items: center;
+     }
+
+    h2{
+        color: #000;
+        background-color: #f2f2f2;
+        width: min(300px, 100%);
+        font-size: 1rem;
+        padding: .3rem;
+        border-radius: 1rem;
+        margin: auto;
+    }
+    .right-car{
+        margin-bottom: -1rem;
+        
+    }
+    p{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    .car-category{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+       
+        
+    }
+
+    .carImage-container{
+        background-color: #121212;
+        border-radius: 1rem;
+        color: #cecece;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.951); 
+               
+        }
+
+        a{
+            text-decoration: none;
+            color: #cecece;
+        }
+        
+
+        h1{
+            font-size: 1.5rem;
+        }       
+        p{
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        img{
+            width: 250px;
+            min-height: auto;
+        }
+    }
+
+}
+
+/* About Section */
+.about-container{
+    width: min(1200px, 100%);
+    margin: 30px  auto;
+    padding: 0 50px;
+    background:linear-gradient(
+        90deg,
+        #030303 0%,
+        #a80000 100%,
+        #fec300 80%
+     );
+     
+
+   .about-video{
+        width: min(350px,100%);
+        min-height: 250px;
+        display: block;
+        overflow: hidden;
+    }
+
+    .about-content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .aboutarc-container{
+        width: min(700px, 100%);
+        padding: 30px 40px;
+        
+
+        .aboutarc{
+            color: #fec300;
+            font-weight: 400;
+            font-size: 1.2rem;
+            
+        }
+        p{
+            color: #ededed;
+            font-size: clamp(25px, 8vw, 32px);
+            line-height: 1;
+        }
+
+        .aboutBtn{
+            padding:.7rem 1rem;
+            border-radius: 1.5rem;
+            background-color:#ffb903;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 2rem;
+            &:hover{
+                background-color:#ffc942;
+            }
+        }
+
+        .profile-container{
+
+                .profile-grid{
+                    display: flex;
+                    justify-content: space-between;
+
+                .profile-content{
+                    background-color: #141414;
+                    padding: 15px;
+                        
+                                .profile-img{
+                                    display: flex;
+                                    width: min(700px, 100%);
+                                }
+                                .flex-image{
+                                    display: flex;
+                                    margin: .5rem 0;
+                                    
+                                }
+                            
+                                .profile{
+                                    width: 100%;
+                                    max-width: 35px;
+                                    height: 35px;
+                                    border-radius: 50%;
+                                    margin-left: -.3rem;
+                                    border: 2px solid #9d0000;
+                                }
+                                .rated{
+                                    color: #fec300;
+                                    font-size: 1.2rem;
+                                    font-weight: 600;
+                                    
+                                }
+
+                                p{
+                                    font-size: .8rem;
+                                    padding: 0 15px;
+                                }
+
+
+                                 .hline{
+                                    border-top: 1px solid #fec300;
+                                    margin-bottom: .5rem;
+                                 }
+
+                                 span{
+                                    color: #ededed;
+                                    font-weight: 300;
+                                    font-size: clamp(15px, 8vw, 15px);
+                                    };
+                            }
+
+                 .drive-img{
+                    background-color: #141414;
+                    text-align: center;
+                    gap: 2rem;
+                }
+
+                img{
+                    width: 100%;
+                    max-width: 300px;
+                    margin-bottom: -2.5rem;
+                }
+
+                p{
+                    font-size: 1rem;
+                }
+                
+            }
+
+           
+
+           
+
+        }
+
+        
+        
+    }
+}
+
+
+/* Contact Section */
+.contact-container{
+    position: relative;
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    background-image: url(../image/car/aboutcar.png);
+    min-height: 280px;
+    background-size: cover;
+    margin-bottom: -.1rem;
+    z-index: -1;
+
+            h3{
+                color: #ededed;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%);
+                font-weight: 400;
+            }
+
+            p{
+                position: absolute;
+                top: 22%;
+                left: 50%;
+                transform: translate(-50%);
+                color: #fec300;
+                font-size: 3rem;
+                font-weight: 600;
+                
+            }
+    
+    }
+
+
+.contact-content{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        width: min(1200px, 100%);
+        margin: 0 auto;
+        background: linear-gradient(
+        90deg,
+        #030000e8 0%,
+        #fec300 100%,
+        #010000e8 100%
+        );
+        padding: 10px 40px;
+        margin-bottom: 2rem;
+
+        p{
+            color: #ededed;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: .5rem;
+        }
+        .contact-text{
+            color: #ededed;
+            font-weight: 200;
+            margin-bottom: 1rem;
+        }
+
+        .sub-text{
+            display: flex;
+            align-items: center;   /* Vertically center the icon */
+            gap: 15px;             /* Space between icon and text */
+        }
+
+        .text-content{
+            display: flex;
+            flex-direction: column; /* Stack the two text lines */
+            color: #ededed;
+            margin-top: .6rem;
+        }
+
+        .icon{
+            color: #fec300;
+            font-size: 2rem;
+        }
+
+        .emergency{
+            font-weight: 300;
+            font-size: .8rem;
+            margin-bottom: -1rem;
+        }
+
+        
+        .sub-text p{
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .chat-support{
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        /* Form Container */
+        .form-container{
+            background-color: #141414;
+            padding: 1.2rem;
+            width: min(450px, 100%);
+            border-radius: 1rem;
+        }
+        .field-cont{
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .field-input{
+             margin-bottom: 1rem;
+             color: #ededed;
+        }
+        .field-input input{
+            padding: .7rem 1rem;
+            border-radius: .7rem;
+            border: none;
+            width: 100%;
+        }
+        .field-input textarea{
+            width: 100%;
+            border-radius: .7rem;
+            padding: .5rem 1rem;
+        }
+
+        .formBtn{
+            padding:.7rem 2.5rem;
+            border-radius: 1.5rem;
+            background-color:#ffb903;
+            border: none;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            &:hover{
+                background-color:#ffc942;
+                color: #212121;
+            }
+        }
+        
+    }
+
+
+
+
+
+/* Footer Section */
+.footer-container{
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    background: linear-gradient(
+    90deg,
+        #030303 0%,
+        #a80000e8 100%,
+        #ffc400 100%
+  );
+}
+
+.footer-container .footer-content{
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  padding: 2rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.footer-logo{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.home .arc{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ededed;
+    gap: .5rem;
+}
+.home p{
+    font-size: clamp(10px, 8vw, 17px);
+}
+
+/* Icon Section FB YT LINKIN Instagram */
+
+.fa-square-facebook {
+ 
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.fa-square-facebook:hover{
+  color: #0059ff;
+  
+}
+.fa-square-youtube{
+  
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.fa-square-youtube:hover{
+  color: #ff1e00;
+  
+}
+.fa-linkedin{
+  
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.fa-linkedin:hover{
+  color: #5c8de9;
+  
+}
+.fa-square-instagram{
+  
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.fa-square-instagram:hover{
+  color: #e60f93;
+ 
+}
+
+.socialmedia-icon h3{
+  color: #fec300;
+}
+
+.socialmedia-icon i{
+  font-size: 2rem;
+  color: #ffff;
+}
+
+footer .home h1, footer .home h3, footer .hours h2{
+  font-size: 1.2rem;
+  color: #fec300;
+}
+footer .home a{
+  cursor: pointer;
+}
+.hours{
+    line-height: 20px;
+    font-weight: 300;
+}
+
+footer .footer_copy{
+  text-align: center;
+  background-color: #141414;
+  color: #fff;
+  padding:2rem;
+  margin-bottom: -1rem;
+}
+
+
+

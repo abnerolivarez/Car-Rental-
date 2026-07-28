@@ -1,0 +1,337 @@
+/* Base Global Reset Layer */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Section Layout Wrapper */
+.about-section {
+    padding: 30px 0px;
+    margin-top: 4rem;
+}
+
+.aboutUs-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+     background: radial-gradient(circle, #000000,#a60101, #000000ed);
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 50px;
+    align-items: center;
+}
+
+/* Text Element Column */
+.aboutUs-content {
+    flex: 1;
+}
+
+.about-subtitle {
+    display: block;
+    color: #ff5a36; /* Accent theme color: Feel free to change */
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.about-title {
+    font-size: 38px;
+    line-height: 1.2;
+    color: #ffff;
+    margin-bottom: 20px;
+}
+
+.story-title {
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #ffff;
+}
+
+.about-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #eeeeee;
+    margin-bottom: 15px;
+}
+
+/* Feature Pillars Layout (2 Columns, 2 Rows) */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.pillar-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.pillar-icon {
+    background-color: #fff0ec;
+    color: #ff5a36;
+    font-weight: bold;
+    font-size: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.pillar-text h4 {
+    font-size: 16px;
+    color: #ff7615;
+    margin-bottom: 4px;
+}
+
+.pillar-text p {
+    font-size: 14px;
+    color: #ffff;
+    line-height: 1.4;
+}
+
+/* Custom Booking Action Button */
+.about-btn {
+    display: inline-block;
+    background-color: #ff5a36;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 35px;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.about-btn:hover {
+    background-color: #e04422;
+    transform: translateY(-2px);
+}
+
+/* Right Media Column */
+.about-media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+/* ========================================================== */
+
+
+
+/* Fleet Section Main Background */
+.fleet-section {
+    padding: 30px 0px;
+    margin-top: 4rem;
+}
+
+.fleet-container {
+    width: min(1200px,100%);
+    margin: 0 auto;
+    background:radial-gradient(circle,#000000, #9f1d00, #000000);
+    padding: 50px;
+}
+
+/* Header Text Alignments */
+.fleet-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+
+.fleet-subtitle {
+    display: block;
+    color: #fc5d39; /* Unified accent theme color */
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.fleet-title {
+    font-size: 36px;
+    color: #fff0ec;
+    margin-bottom: 15px;
+}
+
+.fleet-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff3f0;
+}
+
+/* Fleet Cards Grid System (3 Columns across desktop) */
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Individual Card Blocks */
+.car-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Wrappers */
+.car-image-box {
+    background-color: #f1f1f1;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Text Padding and Data Layout inside Card */
+.car-details {
+    padding: 25px;
+}
+
+.car-type-badge {
+    display: inline-block;
+    background-color: #fff0ec;
+    color: #ff5a36;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.car-name {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.car-name .car-year {
+    font-size: 14px;
+    color: #888888;
+    font-weight: 400;
+}
+
+/* Mini Specs Grid (2 columns inside card) */
+.car-specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.spec-item {
+    font-size: 14px;
+    color: #555555;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Footer Section with Pricing and Buttons */
+.car-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-amount {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ff5a36;
+}
+
+.price-unit {
+    font-size: 14px;
+    color: #777777;
+}
+
+.book-btn {
+    background-color: #ff5a36;
+    color: #ffff;
+    text-decoration: none;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.book-btn:hover {
+    background-color: #ff6a49;
+}
+
+
+
+
+
+
+/* Responsive Tablet & Mobile Media Queries */
+@media (max-width: 992px) {
+    .aboutUs-container {
+        flex-direction: column-reverse; /* Stacks image below text on mobile/tablet */
+        gap: 40px;
+    }
+    
+    .about-title {
+        font-size: 32px;
+    }
+
+     .fleet-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .fleet-grid {
+        grid-template-columns: 1fr; /* 1 full-width column on phone screens */
+    }
+    
+    .fleet-title {
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .pillars-grid {
+        grid-template-columns: 1fr; /* Drop pillars down to a single column on small phones */
+    }
+    
+    .aboutUs-section {
+        padding: 50px 15px;
+    }
+}
